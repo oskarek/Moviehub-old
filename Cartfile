@@ -1,0 +1,5 @@
+github "ReactiveX/RxSwift" "3.2.0"
+github "Moya/Moya"
+github "Quick/Quick"
+github "Quick/Nimble"
+github "RxSwiftCommunity/RxNimble"
