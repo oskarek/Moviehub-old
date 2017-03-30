@@ -27,7 +27,7 @@ class MovieSearchViewController: UIViewController {
   
   private func bindViewModelToUI() {
     viewModel.output.moviesResult
-      .map { movies in (movies.first?.title ?? "") + " " + (movies.first?.year ?? "") }
+      .map { movies in "\(movies.first?.title ?? "") \(movies.first?.releaseDate ?? "")" }
       .drive(displayLabel.rx.text)
       .disposed(by: disposeBag)
   }

@@ -22,6 +22,12 @@
 		FF126E351E4910500012653B /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FF126E321E4910500012653B /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FF126E361E4910500012653B /* RxBlocking.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FF126E331E4910500012653B /* RxBlocking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FF126E381E4911E90012653B /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF126E371E4911E90012653B /* Movie.swift */; };
+		FF6A0DEE1E8C45710020DAFA /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF6A0DED1E8C45710020DAFA /* Argo.framework */; };
+		FF6A0DF01E8C45780020DAFA /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF6A0DEF1E8C45780020DAFA /* Curry.framework */; };
+		FF6A0DF21E8C45910020DAFA /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF6A0DF11E8C45910020DAFA /* Runes.framework */; };
+		FF6A0DF41E8C4EA70020DAFA /* TheMovieDBEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6A0DF31E8C4EA70020DAFA /* TheMovieDBEndpoint.swift */; };
+		FF9F76541E8D373000DA7A69 /* Response+Argo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9F76511E8D373000DA7A69 /* Response+Argo.swift */; };
+		FF9F76551E8D373000DA7A69 /* Observable+Argo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9F76531E8D373000DA7A69 /* Observable+Argo.swift */; };
 		FFD4F5B01E48DBFF002022B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD4F5AF1E48DBFF002022B0 /* AppDelegate.swift */; };
 		FFD4F5B51E48DBFF002022B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFD4F5B31E48DBFF002022B0 /* Main.storyboard */; };
 		FFD4F5B71E48DBFF002022B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFD4F5B61E48DBFF002022B0 /* Assets.xcassets */; };
@@ -71,7 +77,13 @@
 		FF126E311E4910500012653B /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		FF126E321E4910500012653B /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		FF126E331E4910500012653B /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
-		FF126E371E4911E90012653B /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		FF126E371E4911E90012653B /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Movie.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		FF6A0DED1E8C45710020DAFA /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
+		FF6A0DEF1E8C45780020DAFA /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = Carthage/Build/iOS/Curry.framework; sourceTree = "<group>"; };
+		FF6A0DF11E8C45910020DAFA /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
+		FF6A0DF31E8C4EA70020DAFA /* TheMovieDBEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheMovieDBEndpoint.swift; sourceTree = "<group>"; };
+		FF9F76511E8D373000DA7A69 /* Response+Argo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Response+Argo.swift"; sourceTree = "<group>"; };
+		FF9F76531E8D373000DA7A69 /* Observable+Argo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+Argo.swift"; sourceTree = "<group>"; };
 		FFD4F5AC1E48DBFF002022B0 /* Moviehub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moviehub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFD4F5AF1E48DBFF002022B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFD4F5B41E48DBFF002022B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -97,6 +109,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF126E211E4905020012653B /* Alamofire.framework in Frameworks */,
+				FF6A0DEE1E8C45710020DAFA /* Argo.framework in Frameworks */,
+				FF6A0DF21E8C45910020DAFA /* Runes.framework in Frameworks */,
+				FF6A0DF01E8C45780020DAFA /* Curry.framework in Frameworks */,
 				FF126E221E4905020012653B /* Moya.framework in Frameworks */,
 				FF126E231E4905020012653B /* Result.framework in Frameworks */,
 				FF126E241E4905020012653B /* RxCocoa.framework in Frameworks */,
@@ -120,6 +135,9 @@
 		FF126E1A1E4905020012653B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FF6A0DF11E8C45910020DAFA /* Runes.framework */,
+				FF6A0DEF1E8C45780020DAFA /* Curry.framework */,
+				FF6A0DED1E8C45710020DAFA /* Argo.framework */,
 				FF126E2A1E490CA30012653B /* Nimble.framework */,
 				FF126E2B1E490CA30012653B /* Quick.framework */,
 				FF126E2C1E490CA30012653B /* RxBlocking.framework */,
@@ -131,6 +149,39 @@
 				FF126E201E4905020012653B /* RxSwift.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF5352221E8D5F3000EF6B59 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				FF6A0DF31E8C4EA70020DAFA /* TheMovieDBEndpoint.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		FF6A0DEC1E8C35BF0020DAFA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FF126E371E4911E90012653B /* Movie.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FF9F76501E8D371E00DA7A69 /* Moya-Argo */ = {
+			isa = PBXGroup;
+			children = (
+				FF9F76511E8D373000DA7A69 /* Response+Argo.swift */,
+				FF9F76521E8D373000DA7A69 /* RxSwift */,
+			);
+			name = "Moya-Argo";
+			sourceTree = "<group>";
+		};
+		FF9F76521E8D373000DA7A69 /* RxSwift */ = {
+			isa = PBXGroup;
+			children = (
+				FF9F76531E8D373000DA7A69 /* Observable+Argo.swift */,
+			);
+			path = RxSwift;
 			sourceTree = "<group>";
 		};
 		FFD4F5A31E48DBFE002022B0 = {
@@ -158,6 +209,9 @@
 		FFD4F5AE1E48DBFF002022B0 /* Moviehub */ = {
 			isa = PBXGroup;
 			children = (
+				FF5352221E8D5F3000EF6B59 /* API */,
+				FF9F76501E8D371E00DA7A69 /* Moya-Argo */,
+				FF6A0DEC1E8C35BF0020DAFA /* Model */,
 				FFD4F5AF1E48DBFF002022B0 /* AppDelegate.swift */,
 				FF126E281E4908270012653B /* MovieSearchViewController.swift */,
 				FFEEE8521E493B6F003EB745 /* MovieSearchViewModel.swift */,
@@ -165,7 +219,6 @@
 				FFD4F5B61E48DBFF002022B0 /* Assets.xcassets */,
 				FFD4F5B81E48DBFF002022B0 /* LaunchScreen.storyboard */,
 				FFD4F5BB1E48DBFF002022B0 /* Info.plist */,
-				FF126E371E4911E90012653B /* Movie.swift */,
 			);
 			path = Moviehub;
 			sourceTree = "<group>";
@@ -285,6 +338,9 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxMoya.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Argo.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Runes.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Curry.framework",
 			);
 			outputPaths = (
 			);
@@ -307,10 +363,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF6A0DF41E8C4EA70020DAFA /* TheMovieDBEndpoint.swift in Sources */,
 				FFD4F5B01E48DBFF002022B0 /* AppDelegate.swift in Sources */,
 				FF126E291E4908270012653B /* MovieSearchViewController.swift in Sources */,
+				FF9F76541E8D373000DA7A69 /* Response+Argo.swift in Sources */,
 				FF126E381E4911E90012653B /* Movie.swift in Sources */,
 				FFEEE8531E493B6F003EB745 /* MovieSearchViewModel.swift in Sources */,
+				FF9F76551E8D373000DA7A69 /* Observable+Argo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

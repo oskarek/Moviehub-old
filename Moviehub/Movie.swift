@@ -7,8 +7,35 @@
 //
 
 import Foundation
+import Argo
+import Runes
+import Curry
+
+enum Genre {
+  case action, adventure, animation, comedy, crime, documentary, drama, family, fantasy, history, horror, music, mystery, romance, scienceFiction, tvMovie, thriller, war, western
+}
 
 struct Movie {
+  let id: Int
   let title: String
-  let year: String
+  let posterUrl: String?
+  let overview: String?
+  let collectionId: Int?
+  let genreIds: [Int]
+  let runtime: String?
+  let releaseDate: String?
+}
+
+extension Movie: Decodable {
+  static func decode(_ json: JSON) -> Decoded<Movie> {
+    return curry(Movie.init)
+      <^> json <| "id"
+      <*> json <| "title"
+      <*> json <|? "poster_path"
+      <*> json <|? "overview"
+      <*> json <|? "belongs_to_collection"
+      <*> json <|| "genre_ids"
+      <*> json <|? "runtime"
+      <*> json <|? "release_date"
+  }
 }

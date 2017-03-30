@@ -9,6 +9,9 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import Moya
+import RxMoya
+import Argo
 
 protocol MovieSearchViewModelInput {
   var searchText: BehaviorSubject<String> { get }
@@ -25,15 +28,20 @@ protocol MovieSearchViewModelType {
 
 struct MovieSearchViewModel: MovieSearchViewModelType, MovieSearchViewModelInput, MovieSearchViewModelOutput {
   
+  private let provider = RxMoyaProvider<TheMovieDB>()
+  
   var searchText = BehaviorSubject<String>(value: "")
   
-  var moviesResult: Driver<[Movie]>
-  
-  init() {
-    moviesResult = searchText
+  var moviesResult: Driver<[Movie]> {
+    return searchText
       .filter { s in !s.isEmpty }
       .debounce(0.3, scheduler: MainScheduler.instance)
-      .map { s in [Movie(title: s, year: "2010")] }
+      .distinctUntilChanged()
+      .flatMapLatest { query in
+        self.provider
+          .request(TheMovieDB.search(type: .movies, query: query))
+          .mapArray(rootKey: "results")
+      }
       .asDriver(onErrorJustReturn: [])
   }
   
