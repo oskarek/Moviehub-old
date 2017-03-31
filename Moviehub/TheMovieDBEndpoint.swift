@@ -22,6 +22,7 @@ enum TheMovieDB {
 }
 
 extension TheMovieDB {
+  /// The type of media to search for
   enum SearchType {
     case movies, people, tv, multi
     

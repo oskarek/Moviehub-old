@@ -41,6 +41,7 @@ struct MovieSearchViewModel: MovieSearchViewModelType, MovieSearchViewModelInput
         self.provider
           .request(TheMovieDB.search(type: .movies, query: query))
           .mapArray(rootKey: "results")
+        
       }
       .asDriver(onErrorJustReturn: [])
   }

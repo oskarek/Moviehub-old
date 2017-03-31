@@ -10,14 +10,25 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class MovieSearchViewController: UIViewController {
+class MovieSearchViewController: CustomViewController<MovieSearchView> {
   
   private let disposeBag = DisposeBag()
   
-  private let viewModel = MovieSearchViewModel()
+  private let viewModel: MovieSearchViewModelType
   
-  @IBOutlet weak var searchBar: UISearchBar!
-  @IBOutlet weak var displayLabel: UILabel!
+  init(viewModel: MovieSearchViewModelType) {
+    self.viewModel = viewModel
+    super.init()
+  }
+  
+  required init?(coder aDecoder: NSCoder) {
+    fatalError("this view controller can't be used with Storyboards")
+  }
+  
+  override func viewDidLayoutSubviews() {
+//    print("StackView: \(customView.topLevelStackView)")
+//    customView.topLevelStackView.arrangedSubviews.forEach { view in print("Subview: \(view)") }
+  }
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -28,12 +39,12 @@ class MovieSearchViewController: UIViewController {
   private func bindViewModelToUI() {
     viewModel.output.moviesResult
       .map { movies in "\(movies.first?.title ?? "") \(movies.first?.releaseDate ?? "")" }
-      .drive(displayLabel.rx.text)
+      .drive(customView.rx.movieText)
       .disposed(by: disposeBag)
   }
   
   private func bindUIToViewModel() {
-    searchBar.rx.text.orEmpty
+    customView.rx.searchQuery.orEmpty
       .bindTo(viewModel.input.searchText)
       .disposed(by: disposeBag)
   }
