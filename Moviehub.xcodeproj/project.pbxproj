@@ -36,7 +36,6 @@
 		FFD54A5D1E8E574600655D3B /* MovieSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD54A5C1E8E574600655D3B /* MovieSearchView.swift */; };
 		FFD54A601E8E625300655D3B /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD54A5F1E8E625300655D3B /* CustomView.swift */; };
 		FFD54A621E8E626000655D3B /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD54A611E8E626000655D3B /* CustomViewController.swift */; };
-		FFD54A861E8E97A100655D3B /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFD54A851E8E97A100655D3B /* Storyboard.storyboard */; };
 		FFEEE8531E493B6F003EB745 /* MovieSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEEE8521E493B6F003EB745 /* MovieSearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -99,7 +98,6 @@
 		FFD54A5C1E8E574600655D3B /* MovieSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieSearchView.swift; sourceTree = "<group>"; };
 		FFD54A5F1E8E625300655D3B /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		FFD54A611E8E626000655D3B /* CustomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
-		FFD54A851E8E97A100655D3B /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		FFEEE8521E493B6F003EB745 /* MovieSearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieSearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -230,7 +228,6 @@
 				FFD4F5B61E48DBFF002022B0 /* Assets.xcassets */,
 				FFD4F5B81E48DBFF002022B0 /* LaunchScreen.storyboard */,
 				FFD4F5BB1E48DBFF002022B0 /* Info.plist */,
-				FFD54A851E8E97A100655D3B /* Storyboard.storyboard */,
 			);
 			path = Moviehub;
 			sourceTree = "<group>";
@@ -350,7 +347,6 @@
 			files = (
 				FFD4F5BA1E48DBFF002022B0 /* LaunchScreen.storyboard in Resources */,
 				FFD4F5B71E48DBFF002022B0 /* Assets.xcassets in Resources */,
-				FFD54A861E8E97A100655D3B /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
