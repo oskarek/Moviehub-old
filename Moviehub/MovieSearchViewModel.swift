@@ -34,14 +34,15 @@ struct MovieSearchViewModel: MovieSearchViewModelType, MovieSearchViewModelInput
   
   var moviesResult: Driver<[Movie]> {
     return searchText
-      .filter { s in !s.isEmpty }
       .debounce(0.3, scheduler: MainScheduler.instance)
       .distinctUntilChanged()
-      .flatMapLatest { query in
-        self.provider
+      .flatMapLatest { query -> Observable<[Movie]> in
+        print(query)
+        guard !query.isEmpty else { return .from([]) }
+        return self.provider
           .request(TheMovieDB.search(type: .movies, query: query))
           .mapArray(rootKey: "results")
-        
+          .catchError { error in .just([]) }
       }
       .asDriver(onErrorJustReturn: [])
   }

@@ -38,7 +38,11 @@ class MovieSearchViewController: CustomViewController<MovieSearchView> {
   
   private func bindViewModelToUI() {
     viewModel.output.moviesResult
-      .map { movies in "\(movies.first?.title ?? "") \(movies.first?.releaseDate ?? "")" }
+      .map { movies in
+        let res = "\(movies.first?.title ?? "") \(movies.first?.releaseDate ?? "")"
+        print(movies)
+        return res
+      }
       .drive(customView.rx.movieText)
       .disposed(by: disposeBag)
   }
