@@ -33,18 +33,15 @@ struct MovieSearchViewModel: MovieSearchViewModelType, MovieSearchViewModelInput
   var searchText = BehaviorSubject<String>(value: "")
   
   var moviesResult: Driver<[Movie]> {
-    return searchText
-      .debounce(0.3, scheduler: MainScheduler.instance)
+    return searchText.asDriver(onErrorJustReturn: "")
+      .debounce(0.3)
       .distinctUntilChanged()
-      .flatMapLatest { query -> Observable<[Movie]> in
-        print(query)
-        guard !query.isEmpty else { return .from([]) }
+      .flatMapLatest { query -> Driver<[Movie]> in
         return self.provider
           .request(TheMovieDB.search(type: .movies, query: query))
           .mapArray(rootKey: "results")
-          .catchError { error in .just([]) }
+          .asDriver(onErrorJustReturn: [])
       }
-      .asDriver(onErrorJustReturn: [])
   }
   
   var input: MovieSearchViewModelInput { return self }
