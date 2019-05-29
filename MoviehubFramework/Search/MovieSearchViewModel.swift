@@ -13,39 +13,23 @@ import Moya
 import RxMoya
 import Argo
 
-public protocol MovieSearchViewModelInput {
-  var searchText: BehaviorSubject<String> { get }
-}
+let provider = MoyaProvider<TheMovieDB>()
 
-public protocol MovieSearchViewModelOutput {
-  var moviesResult: Driver<[Movie]> { get }
-}
-
-public protocol MovieSearchViewModelType {
-  var input: MovieSearchViewModelInput { get }
-  var output: MovieSearchViewModelOutput { get }
-}
-
-public struct MovieSearchViewModel: MovieSearchViewModelType, MovieSearchViewModelInput, MovieSearchViewModelOutput {
-  
-  public init() {}
-  
-  private let provider = MoyaProvider<TheMovieDB>()
-  
-  public var searchText = BehaviorSubject<String>(value: "")
-  
-  public var moviesResult: Driver<[Movie]> {
-    return searchText.asDriver(onErrorJustReturn: "")
-      .debounce(.milliseconds(300))
-      .distinctUntilChanged()
-      .flatMapLatest { query -> Driver<[Movie]> in
-        return self.provider.rx
-          .request(TheMovieDB.search(type: .movies, query: query))
-          .mapArray(rootKey: "results")
-          .asDriver(onErrorJustReturn: [])
-      }
-  }
-  
-  public var input: MovieSearchViewModelInput { return self }
-  public var output: MovieSearchViewModelOutput { return self }
+public func movieSearchViewModel(
+  searchText: ControlProperty<String>
+  ) -> (
+  moviesResult: Driver<[Movie]>,
+  placeholder: Bool
+  ) {
+  let moviesRes: Driver<[Movie]> = searchText.asDriver()
+    .debounce(.milliseconds(300))
+    .distinctUntilChanged()
+    .flatMapLatest { query in
+      provider.rx
+        .request(TheMovieDB.search(type: .movies, query: query))
+        .mapArray(rootKey: "results")
+        .asDriver(onErrorJustReturn: [])
+    }
+    
+  return (moviesResult: moviesRes, placeholder: false)
 }

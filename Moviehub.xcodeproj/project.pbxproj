@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF432064229EE0910079EDE1 /* RxRelay.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FFBC3E86229E9F0D00D9F6F7 /* RxRelay.framework */; };
+		FF432065229EE0910079EDE1 /* Runes.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FF6A0DF11E8C45910020DAFA /* Runes.framework */; };
+		FF432066229EE0910079EDE1 /* Curry.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FF6A0DEF1E8C45780020DAFA /* Curry.framework */; };
+		FF432067229EE0910079EDE1 /* Argo.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FF6A0DED1E8C45710020DAFA /* Argo.framework */; };
+		FF432068229EE0910079EDE1 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FF126E1B1E4905020012653B /* Alamofire.framework */; };
+		FF432069229EE0910079EDE1 /* Moya.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FF126E1C1E4905020012653B /* Moya.framework */; };
+		FF43206A229EE0910079EDE1 /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FF126E1D1E4905020012653B /* Result.framework */; };
+		FF43206B229EE0910079EDE1 /* RxCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FF126E1E1E4905020012653B /* RxCocoa.framework */; };
+		FF43206C229EE0910079EDE1 /* RxMoya.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FF126E1F1E4905020012653B /* RxMoya.framework */; };
+		FF43206D229EE0910079EDE1 /* RxSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FF126E201E4905020012653B /* RxSwift.framework */; };
 		FFA708E0229EBDDF00AF9FC3 /* MoviehubFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFA708D7229EBDDF00AF9FC3 /* MoviehubFramework.framework */; };
 		FFA708E7229EBDDF00AF9FC3 /* MoviehubFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA708E6229EBDDF00AF9FC3 /* MoviehubFrameworkTests.swift */; };
 		FFA708E9229EBDDF00AF9FC3 /* MoviehubFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = FFA708D9229EBDDF00AF9FC3 /* MoviehubFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -28,26 +38,6 @@
 		FFA70916229EC1AF00AF9FC3 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF126E2B1E490CA30012653B /* Quick.framework */; };
 		FFA70917229EC1AF00AF9FC3 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF126E2C1E490CA30012653B /* RxBlocking.framework */; };
 		FFA70918229EC1AF00AF9FC3 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF126E201E4905020012653B /* RxSwift.framework */; };
-		FFA70919229EC1D900AF9FC3 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFBC3E86229E9F0D00D9F6F7 /* RxRelay.framework */; };
-		FFA7091A229EC1D900AF9FC3 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF6A0DF11E8C45910020DAFA /* Runes.framework */; };
-		FFA7091B229EC1D900AF9FC3 /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF6A0DEF1E8C45780020DAFA /* Curry.framework */; };
-		FFA7091C229EC1D900AF9FC3 /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF6A0DED1E8C45710020DAFA /* Argo.framework */; };
-		FFA7091D229EC1D900AF9FC3 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF126E1B1E4905020012653B /* Alamofire.framework */; };
-		FFA7091E229EC1D900AF9FC3 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF126E1C1E4905020012653B /* Moya.framework */; };
-		FFA7091F229EC1D900AF9FC3 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF126E1D1E4905020012653B /* Result.framework */; };
-		FFA70920229EC1D900AF9FC3 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF126E1E1E4905020012653B /* RxCocoa.framework */; };
-		FFA70921229EC1D900AF9FC3 /* RxMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF126E1F1E4905020012653B /* RxMoya.framework */; };
-		FFA70922229EC1D900AF9FC3 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF126E201E4905020012653B /* RxSwift.framework */; };
-		FFA70924229EC4AE00AF9FC3 /* RxRelay.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FFBC3E86229E9F0D00D9F6F7 /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FFA70925229EC4AE00AF9FC3 /* Runes.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FF6A0DF11E8C45910020DAFA /* Runes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FFA70926229EC4AE00AF9FC3 /* Curry.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FF6A0DEF1E8C45780020DAFA /* Curry.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FFA70927229EC4AE00AF9FC3 /* Argo.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FF6A0DED1E8C45710020DAFA /* Argo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FFA70928229EC4AE00AF9FC3 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FF126E1B1E4905020012653B /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FFA70929229EC4AE00AF9FC3 /* Moya.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FF126E1C1E4905020012653B /* Moya.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FFA7092A229EC4AE00AF9FC3 /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FF126E1D1E4905020012653B /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FFA7092B229EC4AE00AF9FC3 /* RxCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FF126E1E1E4905020012653B /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FFA7092C229EC4AE00AF9FC3 /* RxMoya.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FF126E1F1E4905020012653B /* RxMoya.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FFA7092D229EC4AE00AF9FC3 /* RxSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FF126E201E4905020012653B /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FFBC3E77229E9F0D00D9F6F7 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF126E1B1E4905020012653B /* Alamofire.framework */; };
 		FFBC3E78229E9F0D00D9F6F7 /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF6A0DED1E8C45710020DAFA /* Argo.framework */; };
 		FFBC3E79229E9F0D00D9F6F7 /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF6A0DEF1E8C45780020DAFA /* Curry.framework */; };
@@ -101,6 +91,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		FF432063229EE0630079EDE1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				FF432064229EE0910079EDE1 /* RxRelay.framework in CopyFiles */,
+				FF432065229EE0910079EDE1 /* Runes.framework in CopyFiles */,
+				FF432066229EE0910079EDE1 /* Curry.framework in CopyFiles */,
+				FF432067229EE0910079EDE1 /* Argo.framework in CopyFiles */,
+				FF432068229EE0910079EDE1 /* Alamofire.framework in CopyFiles */,
+				FF432069229EE0910079EDE1 /* Moya.framework in CopyFiles */,
+				FF43206A229EE0910079EDE1 /* Result.framework in CopyFiles */,
+				FF43206B229EE0910079EDE1 /* RxCocoa.framework in CopyFiles */,
+				FF43206C229EE0910079EDE1 /* RxMoya.framework in CopyFiles */,
+				FF43206D229EE0910079EDE1 /* RxSwift.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FFA708F3229EBDDF00AF9FC3 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -110,25 +119,6 @@
 				FFA708ED229EBDDF00AF9FC3 /* MoviehubFramework.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FFA70923229EC48100AF9FC3 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 16;
-			files = (
-				FFA70924229EC4AE00AF9FC3 /* RxRelay.framework in CopyFiles */,
-				FFA70925229EC4AE00AF9FC3 /* Runes.framework in CopyFiles */,
-				FFA70926229EC4AE00AF9FC3 /* Curry.framework in CopyFiles */,
-				FFA70927229EC4AE00AF9FC3 /* Argo.framework in CopyFiles */,
-				FFA70928229EC4AE00AF9FC3 /* Alamofire.framework in CopyFiles */,
-				FFA70929229EC4AE00AF9FC3 /* Moya.framework in CopyFiles */,
-				FFA7092A229EC4AE00AF9FC3 /* Result.framework in CopyFiles */,
-				FFA7092B229EC4AE00AF9FC3 /* RxCocoa.framework in CopyFiles */,
-				FFA7092C229EC4AE00AF9FC3 /* RxMoya.framework in CopyFiles */,
-				FFA7092D229EC4AE00AF9FC3 /* RxSwift.framework in CopyFiles */,
-			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -180,16 +170,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFA70919229EC1D900AF9FC3 /* RxRelay.framework in Frameworks */,
-				FFA7091A229EC1D900AF9FC3 /* Runes.framework in Frameworks */,
-				FFA7091B229EC1D900AF9FC3 /* Curry.framework in Frameworks */,
-				FFA7091C229EC1D900AF9FC3 /* Argo.framework in Frameworks */,
-				FFA7091D229EC1D900AF9FC3 /* Alamofire.framework in Frameworks */,
-				FFA7091E229EC1D900AF9FC3 /* Moya.framework in Frameworks */,
-				FFA7091F229EC1D900AF9FC3 /* Result.framework in Frameworks */,
-				FFA70920229EC1D900AF9FC3 /* RxCocoa.framework in Frameworks */,
-				FFA70921229EC1D900AF9FC3 /* RxMoya.framework in Frameworks */,
-				FFA70922229EC1D900AF9FC3 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,7 +382,6 @@
 				FFA708D3229EBDDF00AF9FC3 /* Sources */,
 				FFA708D4229EBDDF00AF9FC3 /* Frameworks */,
 				FFA708D5229EBDDF00AF9FC3 /* Resources */,
-				FFA70923229EC48100AF9FC3 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -460,6 +439,7 @@
 				FF126E271E49053F0012653B /* ShellScript */,
 				FFBC3E8D229EA50F00D9F6F7 /* ShellScript */,
 				FFA708F3229EBDDF00AF9FC3 /* Embed Frameworks */,
+				FF432063229EE0630079EDE1 /* CopyFiles */,
 			);
 			buildRules = (
 			);

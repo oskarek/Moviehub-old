@@ -12,10 +12,6 @@ import Runes
 import Curry
 
 public struct TVShow {
-  public init(id: Int, title: String?) {
-    self.id = id
-    self.title = title
-  }
   let id: Int
   let title: String?
 }

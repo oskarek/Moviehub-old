@@ -16,7 +16,7 @@ public class CustomViewController<T: CustomView>: UIViewController {
     view = T()
   }
   
-  init() {
+  public init() {
     super.init(nibName: nil, bundle: nil)
   }
   

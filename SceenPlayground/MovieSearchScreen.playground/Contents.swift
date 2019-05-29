@@ -1,4 +1,4 @@
 import MoviehubFramework
 import PlaygroundSupport
 
-PlaygroundPage.current.liveView = MovieSearchViewController(viewModel: MovieSearchViewModel())
+PlaygroundPage.current.liveView = MovieSearchViewController()
