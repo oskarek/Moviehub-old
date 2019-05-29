@@ -10,13 +10,13 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class MovieSearchViewController: CustomViewController<MovieSearchView> {
+public class MovieSearchViewController: CustomViewController<MovieSearchView> {
   
   private let disposeBag = DisposeBag()
   
   private let viewModel: MovieSearchViewModelType
   
-  init(viewModel: MovieSearchViewModelType) {
+  public init(viewModel: MovieSearchViewModelType) {
     self.viewModel = viewModel
     super.init()
   }
@@ -25,12 +25,12 @@ class MovieSearchViewController: CustomViewController<MovieSearchView> {
     fatalError("this view controller can't be used with Storyboards")
   }
   
-  override func viewDidLayoutSubviews() {
+  override public func viewDidLayoutSubviews() {
 //    print("StackView: \(customView.topLevelStackView)")
 //    customView.topLevelStackView.arrangedSubviews.forEach { view in print("Subview: \(view)") }
   }
   
-  override func viewDidLoad() {
+  override public func viewDidLoad() {
     super.viewDidLoad()
     bindUIToViewModel()
     bindViewModelToUI()

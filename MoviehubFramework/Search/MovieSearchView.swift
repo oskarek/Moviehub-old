@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class MovieSearchView: CustomView {
+public class MovieSearchView: CustomView {
 
   lazy var searchField: UISearchBar = {
     var searchBar = UISearchBar()

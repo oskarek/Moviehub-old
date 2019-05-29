@@ -12,13 +12,6 @@ import Nimble
 
 class MoviehubTests: QuickSpec {
     
-  override func spec() {
-    describe("Movie") {
-      it("works") {
-        let movie = Movie(id: 1, title: "Interstellar", posterUrl: nil, overview: nil, collectionId: nil, genreIds: [], runtime: nil, releaseDate: nil)
-        expect(movie.title).to(equal("Interstellar"))
-      }
-    }
-  }
+  // No tests
     
 }

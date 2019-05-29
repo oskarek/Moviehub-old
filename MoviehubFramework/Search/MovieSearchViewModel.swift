@@ -13,26 +13,28 @@ import Moya
 import RxMoya
 import Argo
 
-protocol MovieSearchViewModelInput {
+public protocol MovieSearchViewModelInput {
   var searchText: BehaviorSubject<String> { get }
 }
 
-protocol MovieSearchViewModelOutput {
+public protocol MovieSearchViewModelOutput {
   var moviesResult: Driver<[Movie]> { get }
 }
 
-protocol MovieSearchViewModelType {
+public protocol MovieSearchViewModelType {
   var input: MovieSearchViewModelInput { get }
   var output: MovieSearchViewModelOutput { get }
 }
 
-struct MovieSearchViewModel: MovieSearchViewModelType, MovieSearchViewModelInput, MovieSearchViewModelOutput {
+public struct MovieSearchViewModel: MovieSearchViewModelType, MovieSearchViewModelInput, MovieSearchViewModelOutput {
+  
+  public init() {}
   
   private let provider = MoyaProvider<TheMovieDB>()
   
-  var searchText = BehaviorSubject<String>(value: "")
+  public var searchText = BehaviorSubject<String>(value: "")
   
-  var moviesResult: Driver<[Movie]> {
+  public var moviesResult: Driver<[Movie]> {
     return searchText.asDriver(onErrorJustReturn: "")
       .debounce(.milliseconds(300))
       .distinctUntilChanged()
@@ -44,6 +46,6 @@ struct MovieSearchViewModel: MovieSearchViewModelType, MovieSearchViewModelInput
       }
   }
   
-  var input: MovieSearchViewModelInput { return self }
-  var output: MovieSearchViewModelOutput { return self }
+  public var input: MovieSearchViewModelInput { return self }
+  public var output: MovieSearchViewModelOutput { return self }
 }

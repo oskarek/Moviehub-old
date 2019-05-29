@@ -15,7 +15,7 @@ enum Genre {
   case action, adventure, animation, comedy, crime, documentary, drama, family, fantasy, history, horror, music, mystery, romance, scienceFiction, tvMovie, thriller, war, western
 }
 
-struct Movie {
+public struct Movie {
   let id: Int
   let title: String
   let posterUrl: String?
@@ -27,7 +27,7 @@ struct Movie {
 }
 
 extension Movie: Decodable {
-  static func decode(_ json: JSON) -> Decoded<Movie> {
+  public static func decode(_ json: JSON) -> Decoded<Movie> {
     return curry(Movie.init)
       <^> json <| "id"
       <*> json <| "title"

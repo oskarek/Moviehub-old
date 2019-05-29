@@ -11,13 +11,17 @@ import Argo
 import Runes
 import Curry
 
-struct TVShow {
+public struct TVShow {
+  public init(id: Int, title: String?) {
+    self.id = id
+    self.title = title
+  }
   let id: Int
   let title: String?
 }
 
 extension TVShow: Decodable {
-  static func decode(_ json: JSON) -> Decoded<TVShow> {
+  public static func decode(_ json: JSON) -> Decoded<TVShow> {
     return curry(TVShow.init)
       <^> json <| "id"
       <*> json <| "name"
