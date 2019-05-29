@@ -39,6 +39,10 @@ extension TheMovieDB {
 }
 
 extension TheMovieDB: TargetType {
+  var headers: [String : String]? {
+      return nil
+  }
+    
   var baseURL: URL {
     switch self {
     case let .search(type: type, query: query):
@@ -69,7 +73,7 @@ extension TheMovieDB: TargetType {
   }
 
   var task: Task {
-    return .request
+    return Task.requestPlain
   }
   
   var parameterEncoding: ParameterEncoding {

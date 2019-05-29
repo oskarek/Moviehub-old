@@ -50,7 +50,7 @@ class MovieSearchView: CustomView {
     topLevelStackView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     // temporary filler view
     let fillerView = UIView()
-    fillerView.setContentHuggingPriority(0, for: .vertical)
+    fillerView.setContentHuggingPriority(UILayoutPriority(rawValue: 0), for: .vertical)
     
     [searchField, displayLabel, fillerView]
       .forEach { view in topLevelStackView.addArrangedSubview(view) }
@@ -63,7 +63,7 @@ extension Reactive where Base : MovieSearchView {
     return base.searchField.rx.text
   }
   
-  var movieText: UIBindingObserver<UILabel, String?> {
+  var movieText: Binder<String?> {
     return base.displayLabel.rx.text
   }
 }

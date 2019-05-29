@@ -10,7 +10,7 @@ import UIKit
 
 class CustomViewController<T: CustomView>: UIViewController {
 
-  var customView: T! { return view as! T }
+  var customView: T { return view as! T }
   
   override func loadView() {
     view = T()

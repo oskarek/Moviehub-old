@@ -1,7 +1,6 @@
-github "ReactiveX/RxSwift" "3.3.1"
-github "Moya/Moya"
+github "ReactiveX/RxSwift" ~> 5.0
+github "Moya/Moya" "14.0.0-alpha.1"
 github "Quick/Quick"
 github "Quick/Nimble"
 github "thoughtbot/Curry"
-github "thoughtbot/Runes"
 github "thoughtbot/Argo"

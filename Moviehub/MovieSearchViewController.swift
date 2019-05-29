@@ -49,7 +49,7 @@ class MovieSearchViewController: CustomViewController<MovieSearchView> {
   
   private func bindUIToViewModel() {
     customView.rx.searchQuery.orEmpty
-      .bindTo(viewModel.input.searchText)
+      .bind(to: viewModel.input.searchText)
       .disposed(by: disposeBag)
   }
   

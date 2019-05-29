@@ -13,9 +13,3 @@ protocol MediaItem {
   var id: Int { get }
   var title: String { get }
 }
-
-extension MediaItem where Self : Decodable {
-  static func decode(_ json: JSON) -> Decoded<MediaItem> {
-    return Self.decode(json)
-  }
-}

@@ -28,16 +28,16 @@ protocol MovieSearchViewModelType {
 
 struct MovieSearchViewModel: MovieSearchViewModelType, MovieSearchViewModelInput, MovieSearchViewModelOutput {
   
-  private let provider = RxMoyaProvider<TheMovieDB>()
+  private let provider = MoyaProvider<TheMovieDB>()
   
   var searchText = BehaviorSubject<String>(value: "")
   
   var moviesResult: Driver<[Movie]> {
     return searchText.asDriver(onErrorJustReturn: "")
-      .debounce(0.3)
+      .debounce(.milliseconds(300))
       .distinctUntilChanged()
       .flatMapLatest { query -> Driver<[Movie]> in
-        return self.provider
+        return self.provider.rx
           .request(TheMovieDB.search(type: .movies, query: query))
           .mapArray(rootKey: "results")
           .asDriver(onErrorJustReturn: [])
