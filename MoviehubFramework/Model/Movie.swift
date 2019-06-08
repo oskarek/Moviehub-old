@@ -22,7 +22,7 @@ public struct Movie {
   let overview: String?
   let collectionId: Int?
   let genreIds: [Int]
-  let runtime: String?
+  let runtime: Int?
   let releaseDate: String?
 }
 
@@ -34,7 +34,7 @@ extension Movie: Decodable {
       <*> json <|? "poster_path"
       <*> json <|? "overview"
       <*> json <|? "belongs_to_collection"
-      <*> json <|| "genre_ids"
+      <*> (json <|| "genre_ids" <|> pure([]))
       <*> json <|? "runtime"
       <*> json <|? "release_date"
   }

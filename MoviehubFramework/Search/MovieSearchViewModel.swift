@@ -9,27 +9,26 @@
 import Foundation
 import RxSwift
 import RxCocoa
-import Moya
 import RxMoya
 import Argo
-
-let provider = MoyaProvider<TheMovieDB>()
 
 public func movieSearchViewModel(
   searchText: ControlProperty<String>
   ) -> (
-  moviesResult: Driver<[Movie]>,
+  mediaItemsResult: Driver<[MediaItem]>,
   placeholder: Bool
   ) {
-  let moviesRes: Driver<[Movie]> = searchText.asDriver()
+  let mediaItemsRes: Driver<[MediaItem]> = searchText.asDriver()
     .debounce(.milliseconds(300))
     .distinctUntilChanged()
     .flatMapLatest { query in
-      provider.rx
-        .request(TheMovieDB.search(type: .movies, query: query))
+      guard !query.isEmpty else { return .just([]) }
+      return Current.provider.rx
+        .request(.search(type: .multi, query: query))
         .mapArray(rootKey: "results")
+        .debug()
         .asDriver(onErrorJustReturn: [])
     }
-    
-  return (moviesResult: moviesRes, placeholder: false)
+
+  return (mediaItemsResult: mediaItemsRes, placeholder: false)
 }

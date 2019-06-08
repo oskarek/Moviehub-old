@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Prelude
 
 public class MovieSearchViewController: CustomViewController<MovieSearchView> {
   
@@ -26,10 +27,13 @@ public class MovieSearchViewController: CustomViewController<MovieSearchView> {
   }
   
   private func bindViewModel() {
-    let (moviesResult, _) = movieSearchViewModel(searchText: customView.rx.searchQuery.orEmpty)
-    
-    moviesResult
-      .map { "\($0.first?.title ?? "") \($0.first?.releaseDate ?? "")" }
+    let (mediaItemsResult, _) = movieSearchViewModel(
+      searchText: customView.searchField.rx.text.orEmpty
+    )
+
+    mediaItemsResult
+      .flatMap(^\.first >>> Driver.from(optional:))
+      .map(String.init(describing:))
       .drive(customView.rx.movieText)
       .disposed(by: disposeBag)
   }

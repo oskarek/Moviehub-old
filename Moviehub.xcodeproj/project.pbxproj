@@ -67,7 +67,6 @@
 		FFD4F5B71E48DBFF002022B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFD4F5B61E48DBFF002022B0 /* Assets.xcassets */; };
 		FFD4F5BA1E48DBFF002022B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFD4F5B81E48DBFF002022B0 /* LaunchScreen.storyboard */; };
 		FFD7BAF022A52EBD007ED1C1 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD7BAEF22A52EBD007ED1C1 /* Mocks.swift */; };
-		FFD7BAF222A52F9B007ED1C1 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD7BAF122A52F9B007ED1C1 /* API.swift */; };
 		FFEB87E822A4620C00918103 /* Reader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFEB87E222A4620C00918103 /* Reader.framework */; };
 		FFEB87E922A4620C00918103 /* Prelude.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFEB87E322A4620C00918103 /* Prelude.framework */; };
 		FFEB87EA22A4620C00918103 /* Either.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFEB87E422A4620C00918103 /* Either.framework */; };
@@ -201,7 +200,6 @@
 		FFD4F5B91E48DBFF002022B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFD4F5BB1E48DBFF002022B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFD7BAEF22A52EBD007ED1C1 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
-		FFD7BAF122A52F9B007ED1C1 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		FFEB87E222A4620C00918103 /* Reader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reader.framework; path = Carthage/Build/iOS/Reader.framework; sourceTree = "<group>"; };
 		FFEB87E322A4620C00918103 /* Prelude.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Prelude.framework; path = Carthage/Build/iOS/Prelude.framework; sourceTree = "<group>"; };
 		FFEB87E422A4620C00918103 /* Either.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Either.framework; path = Carthage/Build/iOS/Either.framework; sourceTree = "<group>"; };
@@ -353,7 +351,6 @@
 			isa = PBXGroup;
 			children = (
 				FFA708FD229EC16000AF9FC3 /* TheMovieDBEndpoint.swift */,
-				FFD7BAF122A52F9B007ED1C1 /* API.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -722,7 +719,6 @@
 				FFA7090B229EC16000AF9FC3 /* MediaItem.swift in Sources */,
 				FFA7090C229EC16000AF9FC3 /* TheMovieDBEndpoint.swift in Sources */,
 				FFA7090F229EC16000AF9FC3 /* Observable+Argo.swift in Sources */,
-				FFD7BAF222A52F9B007ED1C1 /* API.swift in Sources */,
 				FFD7BAF022A52EBD007ED1C1 /* Mocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

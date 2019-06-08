@@ -8,17 +8,12 @@
 
 import Foundation
 import Moya
-
-fileprivate extension String {
-  var urlEscapedString: String {
-    let test = self.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlHostAllowed)!
-    return test
-  }
-}
+import Prelude
 
 enum TheMovieDB {
   fileprivate static let apiKey = "c4c310d31261b52644239b9e959bd9cc"
   case search(type: SearchType, query: String)
+  case movie(id: Int)
 }
 
 extension TheMovieDB {
@@ -42,19 +37,32 @@ extension TheMovieDB: TargetType {
   var headers: [String : String]? {
       return nil
   }
-    
+  
   var baseURL: URL {
+    return URL(string: "https://api.themoviedb.org/3")!
+  }
+  
+  var path: String {
     switch self {
-    case let .search(type: type, query: query):
-      return URL(string: "https://api.themoviedb.org/3/search/\(type.urlString)?api_key=\(TheMovieDB.apiKey)&query=\(query.urlEscapedString)")!
+    case .search(let type, _):
+      return "search/\(type.urlString)"
+    case .movie(let id):
+      return "movie/\(id)"
     }
   }
   
-  var path: String { return "" }
-  
   var method: Moya.Method { return .get }
   
-  var parameters: [String : Any]? { return nil }
+  var parameters: [String : Any] { return [ "api_key": TheMovieDB.apiKey ] <> customParams }
+  
+  var customParams: [String : Any] {
+    switch self {
+    case .search(_, let query):
+      return ["query": query]
+    case .movie:
+      return .empty
+    }
+  }
   
   var sampleData: Data {
     switch self {
@@ -69,15 +77,13 @@ extension TheMovieDB: TargetType {
       case .people:
         return "{ \"page\": 1, \"results\": [\(TheMovieDB.exampleMovie(withMediaType: true)), \(TheMovieDB.exampleTVShow(withMediaType: true))], \"name\": \"Leonardo DiCaprio\", \"popularity\": 13.372483 } ], \"total_results\": 1, \"total_pages\": 1}".data(using: .utf8)!
       }
+    case .movie(_):
+      return Data() // TODO: add real implementation
     }
   }
 
   var task: Task {
-    return Task.requestPlain
-  }
-  
-  var parameterEncoding: ParameterEncoding {
-    return JSONEncoding.default
+    return .requestParameters(parameters: parameters, encoding: URLEncoding.queryString)
   }
 }
 

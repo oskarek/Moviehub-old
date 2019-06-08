@@ -9,31 +9,25 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Prelude
+import Optics
 
 public class MovieSearchView: CustomView {
 
-  lazy var searchField: UISearchBar = {
-    var searchBar = UISearchBar()
-    searchBar.translatesAutoresizingMaskIntoConstraints = false
-    searchBar.autocorrectionType = .no
-    searchBar.keyboardAppearance = .dark
-    return searchBar
-  }()
+  let searchField: UISearchBar = UISearchBar()
+    |> \.translatesAutoresizingMaskIntoConstraints .~ false
+    |> \.autocorrectionType .~ .no
+    |> \.keyboardAppearance .~ .dark
   
-  lazy var displayLabel: UILabel = {
-    var label = UILabel()
-    label.translatesAutoresizingMaskIntoConstraints = false
-    label.textColor = .orange
-    return label
-  }()
+  let displayLabel: UILabel = UILabel()
+    |> \.translatesAutoresizingMaskIntoConstraints .~ false
+    |> \.textColor .~ .orange
+    |> \.numberOfLines .~ 0
   
-  lazy var topLevelStackView: UIStackView = {
-    let stackView = UIStackView()
-    stackView.translatesAutoresizingMaskIntoConstraints = false
-    stackView.alignment = .fill
-    stackView.axis = .vertical
-    return stackView
-  }()
+  let topLevelStackView: UIStackView = UIStackView()
+    |> \.translatesAutoresizingMaskIntoConstraints .~ false
+    |> \.alignment .~ .fill
+    |> \.axis .~ .vertical
   
   override func addSubviews() {
     addSubview(topLevelStackView)
@@ -44,10 +38,11 @@ public class MovieSearchView: CustomView {
   }
   
   private func setupStackViewLayout() {
-    topLevelStackView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-    topLevelStackView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-    topLevelStackView.topAnchor.constraint(equalTo: topAnchor, constant: 20).isActive = true
-    topLevelStackView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+    topLevelStackView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor).isActive = true
+    topLevelStackView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor).isActive = true
+    topLevelStackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor).isActive = true
+    topLevelStackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor).isActive = true
+    
     // temporary filler view
     let fillerView = UIView()
     fillerView.setContentHuggingPriority(UILayoutPriority(rawValue: 0), for: .vertical)
