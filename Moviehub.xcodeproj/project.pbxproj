@@ -17,6 +17,15 @@
 		FF43206B229EE0910079EDE1 /* RxCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FF126E1E1E4905020012653B /* RxCocoa.framework */; };
 		FF43206C229EE0910079EDE1 /* RxMoya.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FF126E1F1E4905020012653B /* RxMoya.framework */; };
 		FF43206D229EE0910079EDE1 /* RxSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FF126E201E4905020012653B /* RxSwift.framework */; };
+		FF4321D622A0293C0079EDE1 /* ObservableUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4321D522A0293C0079EDE1 /* ObservableUtils.swift */; };
+		FF48CC2622A4F33100457DB0 /* Tagged.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF48CC2322A4F33100457DB0 /* Tagged.framework */; };
+		FF48CC2822A4F33100457DB0 /* NonEmpty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF48CC2522A4F33100457DB0 /* NonEmpty.framework */; };
+		FF48CC2922A4F33F00457DB0 /* NonEmpty.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FF48CC2522A4F33100457DB0 /* NonEmpty.framework */; };
+		FF48CC2B22A4F33F00457DB0 /* Tagged.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FF48CC2322A4F33100457DB0 /* Tagged.framework */; };
+		FF48CC2C22A4F39B00457DB0 /* SnapshotTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF48CC2422A4F33100457DB0 /* SnapshotTesting.framework */; };
+		FF48CC2D22A4F3A200457DB0 /* SnapshotTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF48CC2422A4F33100457DB0 /* SnapshotTesting.framework */; };
+		FF48CCDF22A50C3F00457DB0 /* SwiftStdlibExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF48CCDE22A50C3F00457DB0 /* SwiftStdlibExtensions.swift */; };
+		FF9A4D8322A08EFE00446C22 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9A4D8222A08EFE00446C22 /* Environment.swift */; };
 		FFA708E0229EBDDF00AF9FC3 /* MoviehubFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFA708D7229EBDDF00AF9FC3 /* MoviehubFramework.framework */; };
 		FFA708E7229EBDDF00AF9FC3 /* MoviehubFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA708E6229EBDDF00AF9FC3 /* MoviehubFrameworkTests.swift */; };
 		FFA708E9229EBDDF00AF9FC3 /* MoviehubFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = FFA708D9229EBDDF00AF9FC3 /* MoviehubFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -57,6 +66,20 @@
 		FFD4F5B01E48DBFF002022B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD4F5AF1E48DBFF002022B0 /* AppDelegate.swift */; };
 		FFD4F5B71E48DBFF002022B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFD4F5B61E48DBFF002022B0 /* Assets.xcassets */; };
 		FFD4F5BA1E48DBFF002022B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFD4F5B81E48DBFF002022B0 /* LaunchScreen.storyboard */; };
+		FFD7BAF022A52EBD007ED1C1 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD7BAEF22A52EBD007ED1C1 /* Mocks.swift */; };
+		FFD7BAF222A52F9B007ED1C1 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD7BAF122A52F9B007ED1C1 /* API.swift */; };
+		FFEB87E822A4620C00918103 /* Reader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFEB87E222A4620C00918103 /* Reader.framework */; };
+		FFEB87E922A4620C00918103 /* Prelude.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFEB87E322A4620C00918103 /* Prelude.framework */; };
+		FFEB87EA22A4620C00918103 /* Either.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFEB87E422A4620C00918103 /* Either.framework */; };
+		FFEB87EB22A4620C00918103 /* Optics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFEB87E522A4620C00918103 /* Optics.framework */; };
+		FFEB87EC22A4620C00918103 /* State.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFEB87E622A4620C00918103 /* State.framework */; };
+		FFEB87ED22A4620C00918103 /* Tuple.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFEB87E722A4620C00918103 /* Tuple.framework */; };
+		FFEB87EE22A462D400918103 /* Either.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FFEB87E422A4620C00918103 /* Either.framework */; };
+		FFEB87EF22A462D400918103 /* Optics.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FFEB87E522A4620C00918103 /* Optics.framework */; };
+		FFEB87F022A462D400918103 /* Prelude.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FFEB87E322A4620C00918103 /* Prelude.framework */; };
+		FFEB87F122A462D400918103 /* Reader.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FFEB87E222A4620C00918103 /* Reader.framework */; };
+		FFEB87F222A462D400918103 /* State.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FFEB87E622A4620C00918103 /* State.framework */; };
+		FFEB87F322A462D400918103 /* Tuple.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FFEB87E722A4620C00918103 /* Tuple.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +130,14 @@
 				FF43206B229EE0910079EDE1 /* RxCocoa.framework in CopyFiles */,
 				FF43206C229EE0910079EDE1 /* RxMoya.framework in CopyFiles */,
 				FF43206D229EE0910079EDE1 /* RxSwift.framework in CopyFiles */,
+				FFEB87EE22A462D400918103 /* Either.framework in CopyFiles */,
+				FFEB87EF22A462D400918103 /* Optics.framework in CopyFiles */,
+				FFEB87F022A462D400918103 /* Prelude.framework in CopyFiles */,
+				FFEB87F122A462D400918103 /* Reader.framework in CopyFiles */,
+				FFEB87F222A462D400918103 /* State.framework in CopyFiles */,
+				FFEB87F322A462D400918103 /* Tuple.framework in CopyFiles */,
+				FF48CC2922A4F33F00457DB0 /* NonEmpty.framework in CopyFiles */,
+				FF48CC2B22A4F33F00457DB0 /* Tagged.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,9 +164,15 @@
 		FF126E2A1E490CA30012653B /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		FF126E2B1E490CA30012653B /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		FF126E2C1E490CA30012653B /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		FF4321D522A0293C0079EDE1 /* ObservableUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableUtils.swift; sourceTree = "<group>"; };
+		FF48CC2322A4F33100457DB0 /* Tagged.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Tagged.framework; path = Carthage/Build/iOS/Tagged.framework; sourceTree = "<group>"; };
+		FF48CC2422A4F33100457DB0 /* SnapshotTesting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapshotTesting.framework; path = Carthage/Build/iOS/SnapshotTesting.framework; sourceTree = "<group>"; };
+		FF48CC2522A4F33100457DB0 /* NonEmpty.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NonEmpty.framework; path = Carthage/Build/iOS/NonEmpty.framework; sourceTree = "<group>"; };
+		FF48CCDE22A50C3F00457DB0 /* SwiftStdlibExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftStdlibExtensions.swift; sourceTree = "<group>"; };
 		FF6A0DED1E8C45710020DAFA /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
 		FF6A0DEF1E8C45780020DAFA /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = Carthage/Build/iOS/Curry.framework; sourceTree = "<group>"; };
 		FF6A0DF11E8C45910020DAFA /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
+		FF9A4D8222A08EFE00446C22 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		FFA708D7229EBDDF00AF9FC3 /* MoviehubFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MoviehubFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFA708D9229EBDDF00AF9FC3 /* MoviehubFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoviehubFramework.h; sourceTree = "<group>"; };
 		FFA708DA229EBDDF00AF9FC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -163,6 +200,14 @@
 		FFD4F5B61E48DBFF002022B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFD4F5B91E48DBFF002022B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFD4F5BB1E48DBFF002022B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFD7BAEF22A52EBD007ED1C1 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
+		FFD7BAF122A52F9B007ED1C1 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		FFEB87E222A4620C00918103 /* Reader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reader.framework; path = Carthage/Build/iOS/Reader.framework; sourceTree = "<group>"; };
+		FFEB87E322A4620C00918103 /* Prelude.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Prelude.framework; path = Carthage/Build/iOS/Prelude.framework; sourceTree = "<group>"; };
+		FFEB87E422A4620C00918103 /* Either.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Either.framework; path = Carthage/Build/iOS/Either.framework; sourceTree = "<group>"; };
+		FFEB87E522A4620C00918103 /* Optics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Optics.framework; path = Carthage/Build/iOS/Optics.framework; sourceTree = "<group>"; };
+		FFEB87E622A4620C00918103 /* State.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = State.framework; path = Carthage/Build/iOS/State.framework; sourceTree = "<group>"; };
+		FFEB87E722A4620C00918103 /* Tuple.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Tuple.framework; path = Carthage/Build/iOS/Tuple.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +228,7 @@
 				FFA70916229EC1AF00AF9FC3 /* Quick.framework in Frameworks */,
 				FFA70917229EC1AF00AF9FC3 /* RxBlocking.framework in Frameworks */,
 				FFA70918229EC1AF00AF9FC3 /* RxSwift.framework in Frameworks */,
+				FF48CC2D22A4F3A200457DB0 /* SnapshotTesting.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +241,7 @@
 				FFBC3EA7229EB39100D9F6F7 /* RxBlocking.framework in Frameworks */,
 				FFBC3EA8229EB39100D9F6F7 /* RxSwift.framework in Frameworks */,
 				FFBC3EA9229EB39100D9F6F7 /* RxTest.framework in Frameworks */,
+				FF48CC2C22A4F39B00457DB0 /* SnapshotTesting.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,9 +257,17 @@
 				FFBC3E7D229E9F0D00D9F6F7 /* Result.framework in Frameworks */,
 				FFBC3E7E229E9F0D00D9F6F7 /* Runes.framework in Frameworks */,
 				FFA708EC229EBDDF00AF9FC3 /* MoviehubFramework.framework in Frameworks */,
+				FFEB87E822A4620C00918103 /* Reader.framework in Frameworks */,
+				FFEB87E922A4620C00918103 /* Prelude.framework in Frameworks */,
+				FFEB87EA22A4620C00918103 /* Either.framework in Frameworks */,
+				FFEB87EB22A4620C00918103 /* Optics.framework in Frameworks */,
+				FFEB87EC22A4620C00918103 /* State.framework in Frameworks */,
+				FFEB87ED22A4620C00918103 /* Tuple.framework in Frameworks */,
 				FFBC3E80229E9F0D00D9F6F7 /* RxCocoa.framework in Frameworks */,
 				FFBC3E81229E9F0D00D9F6F7 /* RxMoya.framework in Frameworks */,
 				FFBC3E82229E9F0D00D9F6F7 /* RxSwift.framework in Frameworks */,
+				FF48CC2622A4F33100457DB0 /* Tagged.framework in Frameworks */,
+				FF48CC2822A4F33100457DB0 /* NonEmpty.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +277,15 @@
 		FF126E1A1E4905020012653B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FF48CC2522A4F33100457DB0 /* NonEmpty.framework */,
+				FF48CC2422A4F33100457DB0 /* SnapshotTesting.framework */,
+				FF48CC2322A4F33100457DB0 /* Tagged.framework */,
+				FFEB87E422A4620C00918103 /* Either.framework */,
+				FFEB87E522A4620C00918103 /* Optics.framework */,
+				FFEB87E322A4620C00918103 /* Prelude.framework */,
+				FFEB87E222A4620C00918103 /* Reader.framework */,
+				FFEB87E622A4620C00918103 /* State.framework */,
+				FFEB87E722A4620C00918103 /* Tuple.framework */,
 				FFBC3E86229E9F0D00D9F6F7 /* RxRelay.framework */,
 				FFBC3E85229E9F0D00D9F6F7 /* RxTest.framework */,
 				FF6A0DF11E8C45910020DAFA /* Runes.framework */,
@@ -240,9 +304,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FF4321D422A029250079EDE1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FF4321D522A0293C0079EDE1 /* ObservableUtils.swift */,
+				FF48CCDE22A50C3F00457DB0 /* SwiftStdlibExtensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		FFA708D8229EBDDF00AF9FC3 /* MoviehubFramework */ = {
 			isa = PBXGroup;
 			children = (
+				FFD7BAEE22A52D7D007ED1C1 /* TestSupport */,
+				FF4321D422A029250079EDE1 /* Utils */,
 				FFA708FC229EC16000AF9FC3 /* API */,
 				FFA708FE229EC16000AF9FC3 /* Generic view controller */,
 				FFA708F8229EC16000AF9FC3 /* Model */,
@@ -250,6 +325,7 @@
 				FFA70905229EC16000AF9FC3 /* Search */,
 				FFA708D9229EBDDF00AF9FC3 /* MoviehubFramework.h */,
 				FFA708DA229EBDDF00AF9FC3 /* Info.plist */,
+				FF9A4D8222A08EFE00446C22 /* Environment.swift */,
 			);
 			path = MoviehubFramework;
 			sourceTree = "<group>";
@@ -277,6 +353,7 @@
 			isa = PBXGroup;
 			children = (
 				FFA708FD229EC16000AF9FC3 /* TheMovieDBEndpoint.swift */,
+				FFD7BAF122A52F9B007ED1C1 /* API.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -358,6 +435,14 @@
 				FFD4F5BB1E48DBFF002022B0 /* Info.plist */,
 			);
 			path = Moviehub;
+			sourceTree = "<group>";
+		};
+		FFD7BAEE22A52D7D007ED1C1 /* TestSupport */ = {
+			isa = PBXGroup;
+			children = (
+				FFD7BAEF22A52EBD007ED1C1 /* Mocks.swift */,
+			);
+			path = TestSupport;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -560,6 +645,15 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxTest.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Prelude.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Either.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Reader.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Optics.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/State.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Tuple.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Tagged.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/NonEmpty.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SnapshotTesting.framework",
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Moya.framework",
@@ -576,6 +670,15 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Nimble.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxBlocking.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxTest.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Prelude.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Either.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Reader.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Optics.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/State.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Tuple.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Tagged.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/NonEmpty.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SnapshotTesting.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -611,11 +714,16 @@
 				FFA7090A229EC16000AF9FC3 /* TVShow.swift in Sources */,
 				FFA70912229EC16000AF9FC3 /* MovieSearchViewController.swift in Sources */,
 				FFA70911229EC16000AF9FC3 /* MovieSearchView.swift in Sources */,
+				FF4321D622A0293C0079EDE1 /* ObservableUtils.swift in Sources */,
 				FFA70909229EC16000AF9FC3 /* Movie.swift in Sources */,
+				FF9A4D8322A08EFE00446C22 /* Environment.swift in Sources */,
+				FF48CCDF22A50C3F00457DB0 /* SwiftStdlibExtensions.swift in Sources */,
 				FFA7090E229EC16000AF9FC3 /* CustomViewController.swift in Sources */,
 				FFA7090B229EC16000AF9FC3 /* MediaItem.swift in Sources */,
 				FFA7090C229EC16000AF9FC3 /* TheMovieDBEndpoint.swift in Sources */,
 				FFA7090F229EC16000AF9FC3 /* Observable+Argo.swift in Sources */,
+				FFD7BAF222A52F9B007ED1C1 /* API.swift in Sources */,
+				FFD7BAF022A52EBD007ED1C1 /* Mocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
